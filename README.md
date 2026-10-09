@@ -1,10 +1,13 @@
 # Hardwired NWA — GiveCamp prototype
 
-A local, eight-page Hugo concept for an adaptive fitness community in Northwest Arkansas. The design puts athlete access and scholarships alongside a clear starting point for prospective athletes.
+A Hugo concept and review prototype for an adaptive fitness community in Northwest Arkansas. The design puts athlete access and scholarships alongside a clear starting point for prospective athletes.
 
-This is a review prototype. It does not take donations, send inquiries, reserve scholarships, or represent an approved public website. Nothing has been deployed.
+The prototype is hosted live on GitHub Pages for stakeholder review:
+👉 **Live Review Site**: <https://ryan258.github.io/hardwired-nwa/>
 
-## Preview
+This is a review prototype. It does not process donations, transmit inquiries, reserve scholarships, or represent an officially approved production website. All pages include `noindex, nofollow`.
+
+## Quick Start & Local Preview
 
 From this project directory:
 
@@ -12,15 +15,36 @@ From this project directory:
 ./scripts/preview
 ```
 
-Open <http://localhost:1313/>. Hugo watches edits automatically. The cache lives inside the project, so no user cache directory access is required.
+Open <http://localhost:1313/>. Hugo watches edits automatically. The cache lives inside the project (`.hugo-cache`), so no user cache directory access is required.
 
-To generate the static prototype:
+To generate the static prototype locally:
 
 ```sh
 ./scripts/build
 ```
 
-The output goes to `public/`. Build output and caches are ignored. Tested with Hugo 0.166.0 extended; no Node package install, theme download, or backend is required.
+The output goes to `public/`. Build output and caches are git-ignored. Tested with Hugo 0.166.0 extended; no Node package install, theme download, or backend is required.
+
+## Verification & Link Checking
+
+To verify local links, assets, and fragment anchors under either the local root or the GitHub Pages subpath:
+
+```sh
+# Local build verification
+./scripts/build && ./scripts/check_links.py ./public /
+
+# Production subpath build verification
+./scripts/build --baseURL "https://ryan258.github.io/hardwired-nwa/" && ./scripts/check_links.py ./public /hardwired-nwa/
+```
+
+Internal links and assets are checked across all generated HTML pages for missing targets, broken fragment anchors, and escaped base paths.
+
+## Automated Deployment (CI/CD)
+
+The repository deploys to GitHub Pages via GitHub Actions:
+- **Workflow**: `.github/workflows/deploy.yml`
+- **Triggers**: Pushes to `main` and manual `workflow_dispatch`
+- **Steps**: Hugo 0.166.0 extended build, `scripts/check_links.py` validation, and deployment via `actions/deploy-pages@v4`.
 
 ## Pages
 
@@ -35,31 +59,31 @@ The output goes to `public/`. Build output and caches are ignored. Tested with H
 | FAQ | `/faq/` | `content/faq.md` |
 | Contact | `/contact/` | `content/contact.md` and `layouts/partials/contact.html` |
 
-All eight routes are reachable through the header, footer, or page calls to action. Home is reached through the brand. Support has its own prominent header button.
+All eight routes are reachable through the header, footer, or page calls to action. Home is reached through the brand mark. Support has its own prominent header button.
 
-## Prototype interactions
+## Prototype Interactions
 
 - Responsive navigation with a keyboard-operable mobile menu.
 - Native expandable FAQ answers.
 - Scholarship cost calculator for punch cards and monthly memberships.
 - Donation explanation dialog with native Escape handling and focus restoration.
 - Validated inquiry preview, rendered locally with no persistence or transmission.
+- Interactive and accessible training pyramid wall sketch.
 
-Navigation, page content, FAQ, and the donation explanation anchor remain usable without JavaScript. The inquiry action stays disabled without JavaScript, preventing accidental form transmission. The calculator displays its initial cost and a no-JavaScript explanation.
+Navigation, page content, FAQ, and the donation explanation anchor remain usable without JavaScript. The inquiry action stays disabled without JavaScript, preventing accidental form transmission. The calculator displays its initial cost and a no-JavaScript fallback explanation.
 
-## Design and assets
+## Design & Visual Direction
 
-The supplied slate blue/deep teal (`#2C5D75`) and peach/apricot (`#F9B689`), with warm white and pale blue neutrals, pair with condensed display typography. Barlow Condensed and DM Sans are requested from Google Fonts with system fallbacks; the rest of the site and its illustration are local. Fonts may differ offline. See `docs/HANDOFF.md` for approval and production needs.
+- **Brand Palette**: Slate blue/deep teal (`#2C5D75`) and peach/apricot (`#F9B689`), supported by warm white (`#F7F4EF`), pale blue (`#DCE9EF`), and dark navy (`#193442`). See `docs/PALETTE.md`.
+- **Mural & Gym Sketch Direction**: Modeled after a handwritten gym whiteboard mural (`docs/references/mural-reference.png`), featuring Patrick Hand marker lettering, sketched borders, loose arrows, a hand-drawn barbell illustration, and an accessible 5-tier training pyramid (Nutrition, Conditioning, Gymnastics, Lifting, Sport). See `docs/MURAL-DIRECTION.md`.
+- **Typography**: Barlow Condensed, DM Sans, and Patrick Hand loaded via Google Fonts with system fallbacks.
+- **Concept Imagery**: Local SVG brand mark and an AI-generated editorial concept illustration (`static/images/adaptive-training-concept-blue-peach.png`; prompt in `docs/ART-PROMPT.md`). Fictional concept artwork, not documentary photographs.
 
-The concept brand mark is local SVG. The hero is AI-generated concept art of fictional people, visibly labeled on the website. It is not an approved logo, athlete photograph, coach portrait, or facility image. The illustration is in `static/images/adaptive-training-concept-blue-peach.png`; its generation prompt is in `docs/ART-PROMPT.md`.
+## Project Documentation & Roadmap
 
-## Editing and handoff
-
-- Page introductions and copy: `content/`.
-- Navigation and site metadata: `hugo.toml`.
-- Home composition: `layouts/index.html`.
-- Shared layout and functional page sections: `layouts/`.
-- Colors, typography, and responsive layout: `assets/css/site.css`.
-- Browser interactions: `assets/js/site.js`.
-
-Detailed review needs and the path from this concept to a managed WordPress website are in `docs/HANDOFF.md`. Prototype pages include `noindex, nofollow`, including the 404 page.
+- **Handoff & Review Needs**: [`docs/HANDOFF.md`](docs/HANDOFF.md)
+- **Targeted Verification Record**: [`docs/VERIFICATION.md`](docs/VERIFICATION.md)
+- **Mural Design Translation**: [`docs/MURAL-DIRECTION.md`](docs/MURAL-DIRECTION.md)
+- **Palette & Contrast Specifications**: [`docs/PALETTE.md`](docs/PALETTE.md)
+- **Hero Illustration Generation Record**: [`docs/ART-PROMPT.md`](docs/ART-PROMPT.md)
+- **Project Roadmap & Milestones**: [`roadmap.md`](roadmap.md)

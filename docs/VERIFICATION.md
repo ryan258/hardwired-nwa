@@ -27,3 +27,19 @@ The illustration is AI-generated concept art and labeled accordingly. The typogr
 ## Supplied palette update
 
 The user supplied slate blue `#2C5D75` and peach `#F9B689`. The shared stylesheet, browser theme, favicon, buttons, accent surfaces, and hero illustration now use that palette. The Hugo build passed; browser computed styles confirmed the exact blue/peach values and navy text on peach buttons. The revised home page fits 1440px desktop and 390px mobile viewports, and its revised illustration loads. The earlier desktop screenshot records the initial palette, not the current design. See `PALETTE.md` for color roles and contrast calculations.
+
+## Mural direction update
+
+The shared design now uses handwritten accents, sketched edges, and a training-wall section on Home and Adaptive CrossFit. Hugo build and targeted internal link/asset/fragment checks passed, including the scaling anchor. Patrick Hand loaded in the browser. The revised Home has no horizontal overflow at 1440px desktop, 390px mobile, or 320px mobile. The Adaptive CrossFit page also fits 320px, with one main heading and a working scaling anchor. The five pyramid labels are accessible HTML text, with the decorative SVG excluded from the accessibility tree.
+
+## GitHub Pages & subpath verification
+
+On October 9, 2026, the prototype was deployed live to GitHub Pages at <https://ryan258.github.io/hardwired-nwa/>.
+
+- **Automated CI/CD:** GitHub Actions workflow `.github/workflows/deploy.yml` executed successfully (Hugo 0.166.0 extended build, link verification, artifact packaging, and Pages deployment).
+- **Subpath Link & Asset Check:** `scripts/check_links.py` executed quietly across all 9 generated HTML pages under baseURL `/hardwired-nwa/` and passed with 0 errors (0 escaped base paths, 0 missing assets, 0 broken fragment anchors).
+- **Live Endpoint Verification:** Verified HTTP/2 200 responses on live endpoints:
+  - Home: `https://ryan258.github.io/hardwired-nwa/`
+  - Support: `https://ryan258.github.io/hardwired-nwa/support/`
+  - About: `https://ryan258.github.io/hardwired-nwa/about/`
+  - Adaptive CrossFit: `https://ryan258.github.io/hardwired-nwa/adaptive-crossfit/`

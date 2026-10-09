@@ -2,18 +2,23 @@
 
 ## What exists
 
-An eight-page local Hugo prototype, with a proposed visual identity and draft copy from the user-supplied project charter. This implements the requested mockup change from WordPress to Hugo. The original WordPress production scope remains a future implementation decision.
+An eight-page responsive Hugo prototype, hosted live on GitHub Pages for stakeholder review:
+👉 **Live Review Site**: <https://ryan258.github.io/hardwired-nwa/>  
+👉 **Source Repository**: <https://github.com/ryan258/hardwired-nwa>
 
-The prototype centers two visitor journeys: an athlete can learn about training and preview a first inquiry; a supporter can explore scholarship costs and see the proposed donation handoff.
+The prototype features a proposed visual identity and draft copy derived from the user-supplied project charter, combined with the confirmed brand palette (slate blue and peach) and a handwritten gym whiteboard mural aesthetic. It implements the requested mockup change from WordPress to Hugo, while preserving a clean migration path to WordPress or managed static hosting if desired.
+
+The prototype centers two primary visitor journeys: an athlete can explore adaptive training, review the gym whiteboard pyramid, and preview an inquiry message; a supporter can explore scholarship costs and view the proposed ARCF donation handoff.
 
 ## Review the experience
 
-1. Start on Home and follow “Find your starting point” to Contact.
-2. Enter sample information and choose “Preview your inquiry.” Nothing should be sent or saved.
-3. Follow “Sponsor an athlete” to Support. Choose membership and six months; the calculator should show $810. Six punch cards should show $450 and 60 visits.
-4. Use a scholarship action to open the donation explanation. Close using its button or Escape.
-5. Open FAQ answers with keyboard or pointer.
-6. At a narrow window width, open Menu and navigate to an interior page.
+1. **Live Deployment**: Open <https://ryan258.github.io/hardwired-nwa/>.
+2. **Athlete Journey**: Follow “Find your starting point” to Contact (`/contact/`). Enter sample information and choose “Preview your inquiry.” Nothing is sent or stored.
+3. **Training Wall**: Explore the mural-inspired training wall sketch on Home and Adaptive CrossFit (`/adaptive-crossfit/`). Review the 5-layer pyramid (Sport, Lifting, Gymnastics, Conditioning, Nutrition) and jump to the `#what-scaling-means` anchor.
+4. **Supporter Journey**: Follow “Sponsor an athlete” to Support (`/support/`). Choose monthly membership and 6 months; the calculator displays $810. Choose punch cards and 6 cards; the calculator displays $450 and 60 visits.
+5. **Donation Modal**: Click “Explore monthly support” or “Explore this gift” to trigger the donation dialog. Dismiss using the close button or keyboard `Escape`.
+6. **FAQ**: Expand questions on FAQ (`/faq/`) with keyboard `Enter` or pointer.
+7. **Mobile Drawer**: Resize to a mobile viewport (<820px), open the hamburger menu, navigate, and close using `Escape` or outer click.
 
 ## Organization confirmation before public use
 
@@ -35,26 +40,21 @@ Six punch cards totaling $450 is a cost example, not a verified usage statistic.
 
 ## Content and imagery
 
-Page-specific pending details are visible within the draft content. The home scene shows fictional people and an imagined gym; the coach page makes clear that it is not a portrait. Replace the illustration only with approved media and matching alt text. The concept SVG mark also requires approval or replacement.
-
-The adaptive CrossFit page explains scaling at a general introductory level. An approved pyramid explanation and reviewed educational graphic remain a content task; the prototype does not provide medical advice, personalized exercise prescriptions, or unverified safety guarantees.
+Page-specific pending details are visible within the draft content:
+- The home scene shows fictional people and an imagined gym; the coach page makes clear that it is not a portrait. Replace the illustration only with approved media and matching alt text.
+- The concept SVG brand mark requires approval or replacement.
+- The training wall sketch (`layouts/partials/training-wall.html`) reflects the handwritten gym whiteboard mural (`docs/references/mural-reference.png`, `docs/MURAL-DIRECTION.md`). The five visible layers (Sport, Lifting, Gymnastics, Conditioning, Nutrition) are presented as an introductory sketch; specific coaching advice and safety guarantees belong with Elisabeth and organization review.
 
 ## Accessibility status
 
-Implemented: semantic landmarks, one main heading per page, a skip link, labeled form controls, visible focus indicators, native FAQ and dialog behavior, touch-sized actions, responsive layout, and reduced-motion support. The calculator uses a live status region and the form preview uses text content rather than rendering user input as HTML.
+Implemented: semantic landmarks, one main heading per page, a skip link, labeled form controls, visible focus indicators, native FAQ and dialog behavior, touch-sized actions, responsive layout, and reduced-motion support. The calculator uses an `aria-live="polite"` status region and the form preview uses text content rather than rendering user input as HTML. The training pyramid uses accessible HTML list items (`<ol class="training-pyramid">`), while the background SVG geometry is marked `aria-hidden="true"`.
 
-Targeted build, route, responsive layout, and interaction checks should be recorded in the session handoff. These are implementation checks, not a WCAG conformance determination. Human keyboard, screen-reader, real-device, content, and facility-access review remain separate acceptance work.
+Automated tests check all routes and assets under both root and subpath baseURLs via `scripts/check_links.py`. These are implementation checks, not a full WCAG conformance determination. Human keyboard, screen-reader, real-device, content, and facility-access review remain separate acceptance work.
 
 ## Production work after mockup approval
 
-Decide whether the production website remains WordPress as in the charter or uses another organization-approved editing workflow. This prototype does not provide a WordPress admin interface.
-
-If WordPress is chosen, transfer the approved layout and copy into an editable theme or block system. Keep shared colors/type consistent and make content changes manageable without touching code. Hosting, domain registration, DreamHost program eligibility, TLS, administrator access, backups, and maintenance ownership require a separate implementation and current provider verification.
-
-Connect the approved donation destination as an ordinary external link. Define what the organization can actually promise about sponsorship selection and recurring payments. Do not imply that this local calculator configures the donation portal.
-
-Implement contact delivery and spam protection with an approved inbox, then verify delivery and failure handling. Do not ask for detailed medical information in a general contact form. Confirm the privacy copy with the organization.
-
-Add real program schedules and access information, replace concept media with approved assets, and review every draft claim. Complete browser/device/assistive-technology acceptance and an administrator walkthrough. Remove prototype notices and noindex only when an actual public release is approved.
-
-No domain, hosting account, donation destination, content management credentials, or external service was created or configured for this prototype.
+1. **CMS & Hosting Selection**: Decide whether the production website remains WordPress as in the charter or uses static hosting (e.g., custom domain on GitHub Pages, Cloudflare Pages, or Netlify). This prototype does not provide a WordPress admin interface.
+2. **WordPress Transition (if selected)**: Transfer the approved layout, CSS design tokens, and copy into an editable theme or block system. Keep shared colors and type consistent. Hosting, domain registration, DreamHost program eligibility, TLS, administrator access, backups, and maintenance ownership require separate implementation.
+3. **Donation Gateway**: Connect the approved donation destination as an ordinary external link to the ARCF portal. Define what the organization can promise regarding sponsorship selection and recurring payments.
+4. **Inquiry Delivery**: Connect contact submissions to an approved inbox, add spam mitigation, and verify message receipt. Confirm privacy disclosures with the organization.
+5. **Real Assets & Public Launch**: Replace concept assets with cleared photography and vector logos, update schedules, complete final assistive technology audits, and remove prototype disclaimers and `noindex` headers.
