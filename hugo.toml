@@ -1,0 +1,37 @@
+baseURL = 'http://localhost:1313/'
+locale = 'en-US'
+title = 'Hardwired NWA'
+disableKinds = ['taxonomy', 'term', 'RSS']
+enableRobotsTXT = false
+
+[params]
+description = 'Adaptive fitness. Shared strength. A place to move, grow, and belong in Northwest Arkansas.'
+prototype = true
+
+[markup.goldmark.renderer]
+unsafe = false
+
+[[menus.main]]
+name = 'About us'
+url = 'about/'
+weight = 10
+[[menus.main]]
+name = 'Our coach'
+url = 'our-coach/'
+weight = 20
+[[menus.main]]
+name = 'Our gym'
+url = 'our-gym/'
+weight = 30
+[[menus.main]]
+name = 'Adaptive CrossFit'
+url = 'adaptive-crossfit/'
+weight = 40
+[[menus.main]]
+name = 'FAQ'
+url = 'faq/'
+weight = 50
+[[menus.main]]
+name = 'Contact'
+url = 'contact/'
+weight = 60

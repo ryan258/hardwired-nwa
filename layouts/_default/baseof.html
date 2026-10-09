@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="{{ .Description | default .Site.Params.description }}">
+  <meta name="theme-color" content="#2c5d75">
+  <title>{{ if not .IsHome }}{{ .Title }} · {{ end }}{{ .Site.Title }} — Adaptive fitness</title>
+  <link rel="icon" href="{{ "images/mark.svg" | relURL }}" type="image/svg+xml">
+  {{ $style := resources.Get "css/site.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+  {{ $script := resources.Get "js/site.js" | minify | fingerprint }}
+  <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="prototype-bar"><span class="prototype-dot" aria-hidden="true"></span> GiveCamp concept <span class="prototype-extra"> / Hugo prototype</span><span class="prototype-status">Preview only · no payments or messages</span></div>
+  {{ partial "header.html" . }}
+  <main id="main" tabindex="-1">{{ block "main" . }}{{ end }}</main>
+  {{ partial "footer.html" . }}
+  <dialog id="donation-dialog" aria-labelledby="donation-title">
+    <div class="dialog-content"><span class="eyebrow">A preview of what comes next</span><h2 id="donation-title">Your support starts here.</h2><p>On the finished website, this action will take you to Hardwired’s approved Arkansas Community Foundation donation page.</p><p class="note">This prototype cannot accept money or reserve an athlete sponsorship. The donation destination and scholarship process still need organization approval.</p><form method="dialog"><button class="button" type="submit">Back to exploring <span aria-hidden="true">↗</span></button></form></div>
+  </dialog>
+</body>
+</html>

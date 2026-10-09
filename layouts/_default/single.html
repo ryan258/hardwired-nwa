@@ -1,0 +1,12 @@
+{{ define "main" }}
+<section class="page-heading wrap"><a class="back-link" href="{{ "" | relURL }}">Home <span aria-hidden="true">/</span> {{ .Title }}</a><span class="eyebrow">{{ .Params.eyebrow }}</span><h1>{{ .Params.headline | default .Title }}<span class="peach">.</span></h1><p>{{ .Params.intro }}</p></section>
+{{ if eq .Params.kind "support" }}
+  {{ partial "support.html" . }}
+{{ else if eq .Params.kind "contact" }}
+  {{ partial "contact.html" . }}
+{{ else if eq .Params.kind "faq" }}
+  {{ partial "faq.html" . }}
+{{ else }}
+  <div class="page-body wrap"><article class="prose">{{ .Content }}</article><aside class="page-aside"><span class="eyebrow">A place to begin</span><h2>Bring your questions.<br>Bring yourself.</h2><p>Tell us about your goals and what would make your first visit work for you.</p><a class="button" href="{{ "contact/" | relURL }}">Let’s connect <span aria-hidden="true">↗</span></a><a class="aside-link" href="{{ "faq/" | relURL }}">Read common questions →</a></aside></div>
+{{ end }}
+{{ end }}
