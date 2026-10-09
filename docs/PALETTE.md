@@ -2,7 +2,7 @@
 
 The user supplied two screenshots on October 9, 2026 and confirmed that these are the organization's desired colors. The screenshots list slate blue/deep teal `#2C5D75` and peach/apricot `#F9B689`. Their surrounding design suggestions are reference material, not separate requirements.
 
-The user reported no clear design preferences, so the existing prototype layout and type direction remain the proposed starting point.
+The user initially reported no clear design preferences, then supplied a gym mural and asked for the site to be modeled after it. The palette remains fixed; the current design adds handwritten accents, sketched lines, and a mural-inspired training diagram. See `MURAL-DIRECTION.md`.
 
 ## Application
 

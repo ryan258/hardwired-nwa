@@ -1,5 +1,6 @@
 ---
 title: What is adaptive CrossFit?
+kind: adaptive
 eyebrow: Different movements. Shared purpose.
 headline: The workout meets you where you are
 intro: Adaptive CrossFit adjusts how an athlete approaches a workout around their abilities, equipment, and goals.
@@ -28,6 +29,8 @@ Detailed safety procedures, enrollment requirements, and any health clearance pr
 
 ## The foundations of training
 
-The charter requests an explanation of the CrossFit pyramid. An approved educational graphic and reviewed explanation are reserved for the final content pass, alongside any terminology and attribution the team needs to use.
+The supplied gym mural pictures five layers: nutrition, conditioning, gymnastics, lifting, and sport. The sketch above brings that visual into the website. It is a way to introduce the areas shown on the wall, with individual training choices discussed with the coach.
+
+The diagram follows the mural’s labels; final educational wording still needs the coach’s review.
 
 [Start with your questions](/contact/) or [explore common questions](/faq/).
