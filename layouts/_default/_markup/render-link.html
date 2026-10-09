@@ -1,0 +1,6 @@
+{{- $url := .Destination -}}
+{{- if or (hasPrefix $url "http://") (hasPrefix $url "https://") (hasPrefix $url "mailto:") (hasPrefix $url "#") -}}
+<a href="{{ $url | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+{{- else -}}
+<a href="{{ relURL (strings.TrimPrefix "/" $url) }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+{{- end -}}
