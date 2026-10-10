@@ -76,7 +76,7 @@ Navigation, page content, FAQ, and the donation explanation anchor remain usable
 
 - **Brand Palette**: Slate blue/deep teal (`#2C5D75`) and peach/apricot (`#F9B689`), supported by warm white (`#F7F4EF`), pale blue (`#DCE9EF`), and dark navy (`#193442`). See `docs/PALETTE.md`.
 - **Mural & Gym Sketch Direction**: Modeled after a handwritten gym whiteboard mural (`docs/references/mural-reference.png`), featuring Patrick Hand marker lettering, sketched borders, loose arrows, a hand-drawn barbell illustration, and an accessible 5-tier training pyramid (Nutrition, Conditioning, Gymnastics, Lifting, Sport). See `docs/MURAL-DIRECTION.md`.
-- **Physical Skill Motifs**: 10 vector SVG skill motifs (Cardio, Stamina, Strength, Flexibility, Power, Speed, Coordination, Agility, Balance, Accuracy) inspired by the mural, integrated into the training wall with downloadable symbols (`static/downloads/physical-skills-icons.svg`) and interactive standalone preview at `/motifs-preview/`. See `docs/PHYSICAL-SKILL-MOTIFS.md`.
+- **Physical Skill Motifs**: 10 vector SVG skill motifs (Cardio, Stamina, Strength, Flexibility, Power, Speed, Coordination, Agility, Balance, Accuracy) inspired by the mural, integrated into the training wall with downloadable symbols (`static/images/hardwired-icons.svg`) and interactive standalone preview at `/motifs-preview/`. See `docs/PHYSICAL-SKILL-MOTIFS.md`.
 - **Typography**: Barlow Condensed, DM Sans, and Patrick Hand loaded via Google Fonts with system fallbacks.
 - **Logo**: The latest supplied badge is retained unchanged in `assets/images/hardwired-nwa-badge-original.png`. The header, footer, and SVG favicon use `assets/images/hardwired-nwa-badge.svg`, a transparent vector trace with no embedded raster image. PNG icons are rendered from that SVG. The downloadable SVG is at `static/downloads/hardwired-nwa-logo.svg`. Earlier circular logo assets are retained. See `docs/LOGO-EDIT.md` for provenance.
 - **Concept Imagery**: An AI-generated editorial concept illustration (`static/images/adaptive-training-concept-blue-peach.png`; prompt in `docs/ART-PROMPT.md`). Fictional concept artwork, not documentary photographs.
@@ -85,9 +85,15 @@ Navigation, page content, FAQ, and the donation explanation anchor remain usable
 
 - **Handoff & Review Needs**: [`docs/HANDOFF.md`](docs/HANDOFF.md)
 - **Targeted Verification Record**: [`docs/VERIFICATION.md`](docs/VERIFICATION.md)
-- **Mural Design Translation**: [`docs/MURAL-DIRECTION.md`](docs/MURAL-DIRECTION.md)
+- **Shared SVG Sprite Pipeline**: [`docs/SVG-SPRITE.md`](docs/SVG-SPRITE.md)
 - **Physical Skill Motifs & Vector Icons**: [`docs/PHYSICAL-SKILL-MOTIFS.md`](docs/PHYSICAL-SKILL-MOTIFS.md)
+- **Supporter Access Icons**: [`docs/ACCESS-ICONS.md`](docs/ACCESS-ICONS.md)
+- **Our Commitments Review Set**: [`docs/COMMITMENT-ICONS.md`](docs/COMMITMENT-ICONS.md)
 - **Logo Vector Trace & Transparency**: [`docs/LOGO-EDIT.md`](docs/LOGO-EDIT.md)
+- **Mural Design Translation**: [`docs/MURAL-DIRECTION.md`](docs/MURAL-DIRECTION.md)
 - **Palette & Contrast Specifications**: [`docs/PALETTE.md`](docs/PALETTE.md)
 - **Hero Illustration Generation Record**: [`docs/ART-PROMPT.md`](docs/ART-PROMPT.md)
 - **Project Roadmap & Milestones**: [`roadmap.md`](roadmap.md)
+
+The shared SVG icon sprite contains all 14 icon symbols (`static/images/hardwired-icons.svg`). Run `python3 scripts/build_svg_sprite.py` after changing the editable SVG sources. See `docs/SVG-SPRITE.md` for IDs and template usage.
+

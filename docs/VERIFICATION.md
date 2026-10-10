@@ -70,3 +70,7 @@ The ten general physical skills pictured on the gym whiteboard mural (Cardio, St
   - Subpath build `hugo --baseURL "https://ryan258.github.io/hardwired-nwa/" --minify` and `scripts/check_links.py ./public /hardwired-nwa/` passed with 0 errors.
   - Dedicated standalone preview at `/motifs-preview/` (`static/motifs-preview/index.html`) serves both raster sprite sheet downloads and vector SVG download options.
 
+
+## SVG consolidation and target correction — October 10, 2026
+
+The earlier inline sprite and separate static/download copies described above have been superseded by `static/images/hardwired-icons.svg`. The shared file contains all 14 icon symbols; the efficacy target now has concentric circular arcs with matching arrow gaps. The base-path build and eleven-page link check passed, all 30 external symbol references resolved, regeneration was deterministic, and Home/commitments previews rendered at desktop and 320px without horizontal overflow. See `docs/SVG-SPRITE.md` for the current pipeline and evidence.

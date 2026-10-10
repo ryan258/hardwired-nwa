@@ -1,12 +1,14 @@
 # Hardwired NWA project roadmap
 
-## Current milestone: Transparent vector badge & mural physical skills SVG integration
+## Current milestone: Shared SVG symbol sprite, access icons & commitments review
 
-Implemented on 2026-10-10; see `docs/VERIFICATION.md` for local and subpath checks performed.
+Implemented on 2026-10-10; see `docs/SVG-SPRITE.md` and `docs/VERIFICATION.md` for local and subpath checks performed.
 
+- **Consolidated SVG Symbol Sprite:** Generated a unified 14-symbol SVG sprite (`static/images/hardwired-icons.svg`, 5,492 bytes) via `scripts/build_svg_sprite.py`, eliminating per-page duplicate inline symbols. Referenced universally with subpath-safe external `<use href="{{ "images/hardwired-icons.svg" | relURL }}#...">`.
+- **Ten Physical Skill Motifs:** Integrated the 10 general physical skills from the gym whiteboard mural (Cardio through Accuracy) in `layouts/partials/training-wall.html` on Home and Adaptive CrossFit pages, with standalone preview at `/motifs-preview/`.
+- **Supporter Access Icon:** Redesigned the 02 / For Supporters card icon as a native vector SVG (`assets/images/motifs/access-scholarships.svg`, symbol `access-scholarships`), rendered via `layouts/partials/access-icon.html`.
+- **Our Commitments Review Set:** Authored three vector commitment motifs (`commitment-safety`, `commitment-efficacy`, `commitment-efficiency`), with circular arc geometry for efficacy. Provided a standalone preview page at `/commitments-preview/`.
 - **Transparent Vector Badge SVG:** Traced and integrated the updated Hardwired NWA badge logo (`assets/images/hardwired-nwa-badge.svg`) with full background transparency across header, footer, SVG favicon, and resized touch icons (`assets/images/hardwired-nwa-badge-icon.png`). Provided downloadable master vector at `static/downloads/hardwired-nwa-logo.svg`.
-- **Ten Physical Skills SVG Motifs:** Extracted and integrated the 10 general physical skills from the gym whiteboard mural (Cardio, Stamina, Strength, Flexibility, Power, Speed, Coordination, Agility, Balance, Accuracy). Implemented clean vector SVG `<symbol>`s in `layouts/partials/svg-skills-sprite.html` and an accessible responsive `<ol class="skills-grid">` inside the mural training wall on Home and Adaptive CrossFit pages.
-- **Standalone Artwork & Vector Downloads:** Published downloadable vector symbols at `static/downloads/physical-skills-icons.svg` and updated the standalone artwork preview at `/motifs-preview/`.
 
 ## Preceding milestone: GitHub Pages live deployment, CI/CD pipeline & mural-led training wall
 
