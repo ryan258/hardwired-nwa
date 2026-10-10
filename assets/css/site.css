@@ -32,3 +32,35 @@ body{background-image:radial-gradient(#19344208 .7px,transparent .7px);backgroun
 @media(max-width:700px){.training-wall{margin-bottom:45px;padding:22px 20px 16px;box-shadow:5px 5px 0 var(--tint)}.wall-header{align-items:start;flex-direction:column;gap:11px}.wall-header .wall-note{font-size:24px;align-self:end}.wall-header .eyebrow{font-size:9px}.wall-layout{grid-template-columns:1fr;gap:28px;padding-top:24px}.wall-copy h2{font-size:39px}.wall-copy p{font-size:14px;margin-top:18px}.pyramid-figure{max-width:350px}.training-pyramid{font-size:27px}.pyramid-note{font-size:23px}.wall-bottom{gap:15px}.wall-barbell{width:55px}.wall-bottom .wall-note{font-size:23px}.wall-arrow{font-size:32px}.hero-wall-note{font-size:22px;top:-9px;left:8px}.hero-art{padding-top:28px}.hero-tag{font-size:22px;top:18px;padding:12px;right:0}.belief-strip span:not(.strip-cross){font-size:23px}.hero-art img{border-radius:5px 23px 5px 12px}.art-label{max-width:100%}.art-label small{font-size:10px}.page-heading+.training-wall{margin-top:30px}}
 @media(max-width:380px){.hero-wall-note{font-size:20px}.hero-tag{font-size:19px}.training-pyramid{font-size:22px}.wall-copy h2{font-size:34px}.wall-bottom .wall-note{font-size:20px}.pyramid-note{font-size:21px}.belief-strip>.wrap{gap:9px}.belief-strip span:not(.strip-cross){font-size:20px}}
 @media(max-width:700px){.hero-art figcaption{margin-top:76px;text-align:left}.art-label{bottom:64px}}
+
+/* Transparent SVG badge: contain the complete artwork without a background tile. */
+.brand-logo{display:block;width:128px;height:128px;object-fit:contain;background:transparent;border-radius:0;padding:5px}
+.site-header .header-inner{min-height:152px;padding-block:12px}
+.footer-main .brand-logo{width:144px;height:144px}
+@media(max-width:1000px){.site-header .header-inner{padding-block:14px;gap:18px}}
+@media(max-width:700px){.brand-logo{width:96px;height:96px;padding:4px}.site-header .header-inner{min-height:124px;padding-block:12px}.footer-main .brand-logo{width:128px;height:128px}}
+
+/* Mural training wall: Ten general physical skills with vector SVG motifs */
+.wall-skills-section{border-top:1px dashed #cfdce2;margin-top:34px;padding-top:28px}
+.skills-header{margin-bottom:22px}
+.skills-header-top{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.skills-header-top .eyebrow{color:var(--blue);font-size:10px}
+.skills-header .skills-note{font-size:23px;transform:rotate(1.5deg);color:var(--blue)}
+.skills-header h3{font-family:var(--display);font-size:38px;letter-spacing:-.02em;margin:8px 0 6px}
+.skills-header p{font-size:14px;color:var(--muted);max-width:650px;line-height:1.7}
+.skills-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.skill-card{position:relative;background:#fdfbf8;border:1.5px solid #738b99;border-radius:5px 13px 4px 9px;padding:18px 12px 16px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;transition:transform .15s ease,background-color .15s ease,border-color .15s ease,box-shadow .15s ease}
+.skill-card:nth-child(2n){border-radius:12px 4px 10px 5px}
+.skill-card:nth-child(3n){border-radius:4px 10px 6px 14px}
+.skill-card:nth-child(4n){border-radius:9px 5px 12px 4px}
+.skill-card:hover{transform:translateY(-2px);background:#f2f7f9;border-color:var(--blue);box-shadow:0 4px 12px rgba(44,93,117,.1)}
+.skill-icon-wrap{width:48px;height:48px;border-radius:50%;background:var(--tint);display:flex;align-items:center;justify-content:center;color:var(--blue);transition:background-color .15s ease,color .15s ease;flex-shrink:0}
+.skill-card:hover .skill-icon-wrap{background:var(--peach);color:var(--ink)}
+.skill-svg-icon{width:26px;height:26px;stroke:currentColor;stroke-width:2;fill:none;display:block}
+.skill-info{display:flex;flex-direction:column;align-items:center;width:100%}
+.skill-num{font-family:var(--hand);font-size:14px;color:var(--blue);display:block;line-height:1}
+.skill-name{font-family:var(--display);font-size:21px;font-weight:700;letter-spacing:.01em;text-transform:uppercase;color:var(--ink);line-height:1.1;margin:4px 0 2px}
+.skill-desc{font-size:11px;line-height:1.35;color:var(--muted);display:block}
+@media(max-width:1000px){.skills-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.skills-header h3{font-size:32px}}
+@media(max-width:650px){.skills-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.skill-card{padding:14px 10px 12px}.skill-name{font-size:18px}.skills-header h3{font-size:28px}.skills-header .skills-note{font-size:20px}}
+

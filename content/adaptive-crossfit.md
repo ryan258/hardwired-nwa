@@ -29,8 +29,8 @@ Detailed safety procedures, enrollment requirements, and any health clearance pr
 
 ## The foundations of training
 
-The supplied gym mural pictures five layers: nutrition, conditioning, gymnastics, lifting, and sport. The sketch above brings that visual into the website. It is a way to introduce the areas shown on the wall, with individual training choices discussed with the coach.
+The supplied gym mural pictures five pyramid layers (nutrition, conditioning, gymnastics, lifting, and sport) alongside ten general physical skills (cardio, stamina, strength, flexibility, power, speed, coordination, agility, balance, and accuracy). The sketch above brings both visuals into the website. It introduces the areas shown on the wall, with individual training choices and adaptations discussed directly with your coach.
 
-The diagram follows the mural’s labels; final educational wording still needs the coach’s review.
+The diagrams follow the mural’s labels; final educational wording still needs the coach’s review.
 
 [Start with your questions](/contact/) or [explore common questions](/faq/).

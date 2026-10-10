@@ -7,13 +7,20 @@
   <meta name="description" content="{{ .Description | default .Site.Params.description }}">
   <meta name="theme-color" content="#2c5d75">
   <title>{{ if not .IsHome }}{{ .Title }} · {{ end }}{{ .Site.Title }} — Adaptive fitness</title>
-  <link rel="icon" href="{{ "images/mark.svg" | relURL }}" type="image/svg+xml">
+  {{ $logo := resources.Get "images/hardwired-nwa-badge.svg" }}
+  <link rel="icon" href="{{ $logo.RelPermalink }}" type="image/svg+xml">
+  {{ $iconSource := resources.Get "images/hardwired-nwa-badge-icon.png" }}
+  {{ $icon := $iconSource.Resize "64x png" }}
+  <link rel="icon" href="{{ $icon.RelPermalink }}" type="image/png" sizes="64x64">
+  {{ $touchIcon := $iconSource.Resize "180x png" }}
+  <link rel="apple-touch-icon" href="{{ $touchIcon.RelPermalink }}" sizes="180x180">
   {{ $style := resources.Get "css/site.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
   {{ $script := resources.Get "js/site.js" | minify | fingerprint }}
   <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
 </head>
 <body>
+  {{ partial "svg-skills-sprite.html" . }}
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="prototype-bar"><span class="prototype-dot" aria-hidden="true"></span> GiveCamp concept <span class="prototype-extra"> / Hugo prototype</span><span class="prototype-status">Preview only · no payments or messages</span></div>
   {{ partial "header.html" . }}

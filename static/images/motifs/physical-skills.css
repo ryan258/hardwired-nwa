@@ -1,0 +1,23 @@
+/* 5 columns × 2 rows. Labels belong in HTML, not inside the artwork. */
+.skill-motif {
+  --motif-size: 112px;
+  display: inline-block;
+  flex: none;
+  width: var(--motif-size);
+  aspect-ratio: 396.6 / 396.5;
+  background-image: url("physical-skills-sprite.png");
+  background-repeat: no-repeat;
+  background-size: 500% 200%;
+  background-position: var(--motif-x, 0%) var(--motif-y, 0%);
+  vertical-align: middle;
+}
+.skill-motif--cardio       { --motif-x: 0%;   --motif-y: 0%; }
+.skill-motif--stamina      { --motif-x: 25%;  --motif-y: 0%; }
+.skill-motif--strength     { --motif-x: 50%;  --motif-y: 0%; }
+.skill-motif--flexibility  { --motif-x: 75%;  --motif-y: 0%; }
+.skill-motif--power        { --motif-x: 100%; --motif-y: 0%; }
+.skill-motif--speed        { --motif-x: 0%;   --motif-y: 100%; }
+.skill-motif--coordination { --motif-x: 25%;  --motif-y: 100%; }
+.skill-motif--agility      { --motif-x: 50%;  --motif-y: 100%; }
+.skill-motif--balance      { --motif-x: 75%;  --motif-y: 100%; }
+.skill-motif--accuracy     { --motif-x: 100%; --motif-y: 100%; }
