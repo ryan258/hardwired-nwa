@@ -43,3 +43,30 @@ On October 9, 2026, the prototype was deployed live to GitHub Pages at <https://
   - Support: `https://ryan258.github.io/hardwired-nwa/support/`
   - About: `https://ryan258.github.io/hardwired-nwa/about/`
   - Adaptive CrossFit: `https://ryan258.github.io/hardwired-nwa/adaptive-crossfit/`
+
+## Supplied logo integration
+
+The user-selected PNG logo replaces the temporary header/footer mark and browser icon. The original source in `assets/images/hardwired-nwa-logo.png` is byte-identical to the supplied attachment. Hugo generates 160px/320px web versions, a 64px favicon, and a 180px Apple touch icon. All nine generated HTML pages contain both logo placements with the accessible home-link name and resolving icon/image assets. The build passed. Browser checks confirmed loaded header/footer logos, square proportions, and no Home overflow at 1440px desktop or 320px mobile. The original colors, composition, and white background are preserved.
+
+## Logo background removal
+
+A separate RGBA transparent logo now replaces the white-background version on the website. The original supplied source remains unchanged. The Hugo build passed; the transparent source and derived web copies retain alpha at their corners. Browser inspection confirmed the header uses the new asset and has no CSS background tile. The rendered Home was visually checked against its warm-white page background. See `LOGO-EDIT.md` for the image editing prompt and asset paths.
+
+## Replacement badge SVG — October 10, 2026
+
+The latest supplied badge now replaces the earlier circular logo. The retained original is byte-identical to the latest attachment. Both SVG copies match and contain 53 vector paths, two artwork fills, no white fill, no background rectangle, and no embedded raster image. The SVG was rendered and visually inspected for the supplied lettering, figures, and wheelchair; transparent PNG render/icon copies have alpha from 0 to 255 and transparent corners. The Hugo build passed, and all internal links/assets resolved across nine generated HTML pages. Desktop Home browser inspection at 1440px confirmed loaded header/footer SVGs, transparent CSS backgrounds, and no horizontal overflow. A 320px mobile emulation also confirmed loaded logos and no horizontal overflow. The existing local preview needed a restart after it cached a missing icon during asset creation; the restarted preview serves the complete site successfully. These are targeted logo/build/render checks, not a new full accessibility audit.
+
+## Physical skill motifs & SVG icons integration — October 10, 2026
+
+The ten general physical skills pictured on the gym whiteboard mural (Cardio, Stamina, Strength, Flexibility, Power, Speed, Coordination, Agility, Balance, Accuracy) are now integrated as scalable SVG vector symbols and responsive cards on the website.
+
+- **Vector Sprite Pipeline:** Created `layouts/partials/svg-skills-sprite.html` containing clean `<symbol>` elements for each skill using `stroke="currentColor"` and `fill="none"` with a 24×24 viewBox. Embedded into `layouts/_default/baseof.html` for zero-request, universal `<use href="#skill-...">` rendering across all pages.
+- **Static & Downloadable Assets:** Exported vector assets to `assets/images/physical-skills-icons.svg`, `static/images/physical-skills-icons.svg`, and `static/downloads/physical-skills-icons.svg`.
+- **UI Integration:** Extended `layouts/partials/training-wall.html` with an accessible `<ol class="skills-grid">` featuring Patrick Hand numbering, displayed subtitles, and aria-hidden SVG icons. Rendered on both Home and Adaptive CrossFit pages.
+- **Styling:** Added responsive grid styles to `assets/css/site.css` (5 columns on desktop, 3 columns on tablet, 2 columns on mobile) with tactile card border radius variations and hover micro-interactions (badge background transition to `--peach` `#F9B689`, card elevation).
+- **Preview & Verification:**
+  - `hugo --minify` builds all 10 HTML pages cleanly in ~25-50ms.
+  - `scripts/check_links.py ./public /` passed quietly with 0 broken links or missing assets across all 10 generated pages.
+  - Subpath build `hugo --baseURL "https://ryan258.github.io/hardwired-nwa/" --minify` and `scripts/check_links.py ./public /hardwired-nwa/` passed with 0 errors.
+  - Dedicated standalone preview at `/motifs-preview/` (`static/motifs-preview/index.html`) serves both raster sprite sheet downloads and vector SVG download options.
+

@@ -1,6 +1,14 @@
 # Hardwired NWA project roadmap
 
-## Current milestone: GitHub Pages live deployment, CI/CD pipeline & mural-led training wall
+## Current milestone: Transparent vector badge & mural physical skills SVG integration
+
+Implemented on 2026-10-10; see `docs/VERIFICATION.md` for local and subpath checks performed.
+
+- **Transparent Vector Badge SVG:** Traced and integrated the updated Hardwired NWA badge logo (`assets/images/hardwired-nwa-badge.svg`) with full background transparency across header, footer, SVG favicon, and resized touch icons (`assets/images/hardwired-nwa-badge-icon.png`). Provided downloadable master vector at `static/downloads/hardwired-nwa-logo.svg`.
+- **Ten Physical Skills SVG Motifs:** Extracted and integrated the 10 general physical skills from the gym whiteboard mural (Cardio, Stamina, Strength, Flexibility, Power, Speed, Coordination, Agility, Balance, Accuracy). Implemented clean vector SVG `<symbol>`s in `layouts/partials/svg-skills-sprite.html` and an accessible responsive `<ol class="skills-grid">` inside the mural training wall on Home and Adaptive CrossFit pages.
+- **Standalone Artwork & Vector Downloads:** Published downloadable vector symbols at `static/downloads/physical-skills-icons.svg` and updated the standalone artwork preview at `/motifs-preview/`.
+
+## Preceding milestone: GitHub Pages live deployment, CI/CD pipeline & mural-led training wall
 
 Implemented on 2026-10-09; see `docs/VERIFICATION.md` for live and local checks performed.
 
@@ -33,7 +41,7 @@ Pending stakeholder confirmation; see `docs/HANDOFF.md` for detailed review requ
   - Approved Arkansas Community Foundation (ARCF) donation portal URL.
   - Production inquiry inbox, privacy policy, and delivery verification.
 - **Asset Replacement:**
-  - Replace concept SVG mark with approved vector organization logo.
+  - Supplied logo is selected and integrated in the prototype. Obtain an original vector master for production if available.
   - Replace AI concept illustration with real, rights-cleared photography of Hardwired athletes and coaches.
 - **Production Architecture Decision:**
   - Evaluate WordPress theme conversion versus static hosting (GitHub Pages / Netlify / Cloudflare Pages).

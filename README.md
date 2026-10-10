@@ -59,7 +59,7 @@ The repository deploys to GitHub Pages via GitHub Actions:
 | FAQ | `/faq/` | `content/faq.md` |
 | Contact | `/contact/` | `content/contact.md` and `layouts/partials/contact.html` |
 
-All eight routes are reachable through the header, footer, or page calls to action. Home is reached through the brand mark. Support has its own prominent header button.
+All eight routes are reachable through the header, footer, or page calls to action. Home is reached through the supplied logo. Support has its own prominent header button.
 
 ## Prototype Interactions
 
@@ -68,7 +68,7 @@ All eight routes are reachable through the header, footer, or page calls to acti
 - Scholarship cost calculator for punch cards and monthly memberships.
 - Donation explanation dialog with native Escape handling and focus restoration.
 - Validated inquiry preview, rendered locally with no persistence or transmission.
-- Interactive and accessible training pyramid wall sketch.
+- Interactive and accessible training pyramid and 10 general physical skills wall sketch.
 
 Navigation, page content, FAQ, and the donation explanation anchor remain usable without JavaScript. The inquiry action stays disabled without JavaScript, preventing accidental form transmission. The calculator displays its initial cost and a no-JavaScript fallback explanation.
 
@@ -76,14 +76,18 @@ Navigation, page content, FAQ, and the donation explanation anchor remain usable
 
 - **Brand Palette**: Slate blue/deep teal (`#2C5D75`) and peach/apricot (`#F9B689`), supported by warm white (`#F7F4EF`), pale blue (`#DCE9EF`), and dark navy (`#193442`). See `docs/PALETTE.md`.
 - **Mural & Gym Sketch Direction**: Modeled after a handwritten gym whiteboard mural (`docs/references/mural-reference.png`), featuring Patrick Hand marker lettering, sketched borders, loose arrows, a hand-drawn barbell illustration, and an accessible 5-tier training pyramid (Nutrition, Conditioning, Gymnastics, Lifting, Sport). See `docs/MURAL-DIRECTION.md`.
+- **Physical Skill Motifs**: 10 vector SVG skill motifs (Cardio, Stamina, Strength, Flexibility, Power, Speed, Coordination, Agility, Balance, Accuracy) inspired by the mural, integrated into the training wall with downloadable symbols (`static/downloads/physical-skills-icons.svg`) and interactive standalone preview at `/motifs-preview/`. See `docs/PHYSICAL-SKILL-MOTIFS.md`.
 - **Typography**: Barlow Condensed, DM Sans, and Patrick Hand loaded via Google Fonts with system fallbacks.
-- **Concept Imagery**: Local SVG brand mark and an AI-generated editorial concept illustration (`static/images/adaptive-training-concept-blue-peach.png`; prompt in `docs/ART-PROMPT.md`). Fictional concept artwork, not documentary photographs.
+- **Logo**: The latest supplied badge is retained unchanged in `assets/images/hardwired-nwa-badge-original.png`. The header, footer, and SVG favicon use `assets/images/hardwired-nwa-badge.svg`, a transparent vector trace with no embedded raster image. PNG icons are rendered from that SVG. The downloadable SVG is at `static/downloads/hardwired-nwa-logo.svg`. Earlier circular logo assets are retained. See `docs/LOGO-EDIT.md` for provenance.
+- **Concept Imagery**: An AI-generated editorial concept illustration (`static/images/adaptive-training-concept-blue-peach.png`; prompt in `docs/ART-PROMPT.md`). Fictional concept artwork, not documentary photographs.
 
 ## Project Documentation & Roadmap
 
 - **Handoff & Review Needs**: [`docs/HANDOFF.md`](docs/HANDOFF.md)
 - **Targeted Verification Record**: [`docs/VERIFICATION.md`](docs/VERIFICATION.md)
 - **Mural Design Translation**: [`docs/MURAL-DIRECTION.md`](docs/MURAL-DIRECTION.md)
+- **Physical Skill Motifs & Vector Icons**: [`docs/PHYSICAL-SKILL-MOTIFS.md`](docs/PHYSICAL-SKILL-MOTIFS.md)
+- **Logo Vector Trace & Transparency**: [`docs/LOGO-EDIT.md`](docs/LOGO-EDIT.md)
 - **Palette & Contrast Specifications**: [`docs/PALETTE.md`](docs/PALETTE.md)
 - **Hero Illustration Generation Record**: [`docs/ART-PROMPT.md`](docs/ART-PROMPT.md)
 - **Project Roadmap & Milestones**: [`roadmap.md`](roadmap.md)
