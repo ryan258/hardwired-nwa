@@ -61,6 +61,8 @@ body{background-image:radial-gradient(#19344208 .7px,transparent .7px);backgroun
 .skill-num{font-family:var(--hand);font-size:14px;color:var(--blue);display:block;line-height:1}
 .skill-name{font-family:var(--display);font-size:21px;font-weight:700;letter-spacing:.01em;text-transform:uppercase;color:var(--ink);line-height:1.1;margin:4px 0 2px}
 .skill-desc{font-size:11px;line-height:1.35;color:var(--muted);display:block}
+.path-art-icon{display:block;width:112px;height:112px;object-fit:contain;flex-shrink:0;margin-top:16px;background:transparent}
+.path-card h3{margin-top:12px}
 @media(max-width:1000px){.skills-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.skills-header h3{font-size:32px}}
 @media(max-width:650px){.skills-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.skill-card{padding:14px 10px 12px}.skill-name{font-size:18px}.skills-header h3{font-size:28px}.skills-header .skills-note{font-size:20px}}
 

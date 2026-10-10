@@ -5,9 +5,8 @@ The user requested a sprite sheet representing all ten skills in their mural pho
 ## Files and use
 
 - `assets/images/physical-skills-icons.svg`: SVG symbol sprite containing all ten vector skill motifs (`#skill-cardio` through `#skill-accuracy`), styled with `stroke="currentColor"`.
-- `static/images/physical-skills-icons.svg`: static copy for direct web referencing.
-- `static/downloads/physical-skills-icons.svg`: downloadable vector asset for stakeholders and designers.
-- `layouts/partials/svg-skills-sprite.html`: Hugo partial embedding the vector symbol sprite into `baseof.html` for universal, subpath-safe `<use href="#skill-...">` usage.
+- `static/images/hardwired-icons.svg`: optimized shared web sprite, including these ten skills, the supporters icon, and the three commitments icons.
+- `scripts/build_svg_sprite.py`: regenerates the shared sprite from editable sources; the duplicate static skills files and inline definitions have been removed.
 - `layouts/partials/training-wall.html`: site component integrating all ten physical skills cards into the mural training wall on Home and Adaptive CrossFit pages.
 - `static/images/motifs/physical-skills-sprite.png`: transparent PNG, 1983 × 793 pixels, raster sprite sheet.
 - `static/images/motifs/physical-skills.css`: classes for selecting each raster cell with CSS background positioning.

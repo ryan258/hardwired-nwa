@@ -1,0 +1,8 @@
+{{ $vector := resources.Get (printf "images/motifs/access-%s.svg" .) }}
+{{ if $vector }}
+  <svg class="path-art-icon" width="128" height="128" viewBox="0 0 128 128" aria-hidden="true" focusable="false"><use href="{{ "images/hardwired-icons.svg" | relURL }}#access-{{ . }}"></use></svg>
+{{ else }}
+  {{ $image := resources.Get (printf "images/motifs/access-%s.png" .) }}
+  {{ $web := $image.Resize "224x webp" }}
+  <img class="path-art-icon" src="{{ $web.RelPermalink }}" width="{{ $web.Width }}" height="{{ $web.Height }}" alt="" aria-hidden="true" loading="lazy" decoding="async">
+{{ end }}
