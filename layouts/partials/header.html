@@ -1,6 +1,6 @@
 <header class="site-header">
   <div class="header-inner">
-    <a class="brand" href="{{ "" | relURL }}" aria-label="Hardwired NWA home"><span class="brand-mark" aria-hidden="true">{{ partial "mark.html" . }}</span><span class="brand-name">HARDWIRED<span class="brand-location">NORTHWEST ARKANSAS</span></span></a>
+    <a class="brand" href="{{ "" | relURL }}" aria-label="Hardwired NWA home">{{ partial "logo.html" . }}</a>
     <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">Menu <span aria-hidden="true">☰</span></button>
     <nav id="site-nav" aria-label="Main navigation">
       {{ range .Site.Menus.main }}<a href="{{ .URL | relURL }}" {{ if eq $.RelPermalink (.URL | relURL) }}aria-current="page"{{ end }}>{{ .Name }}</a>{{ end }}
