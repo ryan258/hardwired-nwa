@@ -1,6 +1,15 @@
 # Hardwired NWA project roadmap
 
-## Current milestone: Shared SVG symbol sprite, access icons & commitments review
+## Current milestone: Favicon suite, expanded 24-symbol vector sprite & donation card motifs
+
+Implemented on 2026-10-11; see `docs/FAVICON.md`, `docs/DONATION-ICONS.md`, `docs/SVG-SPRITE.md`, and `docs/VERIFICATION.md` for local and subpath checks performed.
+
+- **Hexagon Barbell Favicon Suite:** Authored a dedicated browser icon based on the blue hexagon and white barbell wordmark (`assets/images/hardwired-nwa-favicon.svg`). Automated full export via `scripts/build_favicons.py` producing `static/favicon.svg`, multi-resolution `static/favicon.ico` (16, 32, 48px), transparent PNGs (16x16, 32x32), 180px `apple-touch-icon.png`, 512px `site-icon-512.png`, downloadable ZIP kit, and standalone test gallery at `/favicon-preview/`. Injected across all layouts via `layouts/partials/favicon.html`.
+- **24-Symbol Consolidated Vector Sprite:** Expanded `static/images/hardwired-icons.svg` via `scripts/build_svg_sprite.py` to house 24 distinct symbols across five semantic groups: 10 physical skills, 3 access cards, 3 support pathways, 6 commitments, and 2 donation card motifs (`donation-online`, `donation-check`).
+- **Automated Vector Downloads & Gallery Previews:** Automated generation of 24 standalone SVG downloads in `static/downloads/icons/`, four group review sheets (skills, support, commitments, donations), full icon ZIP archive (`static/downloads/hardwired-nwa-icons.zip`), and an interactive multi-size gallery at `/icons-preview/`.
+- **Artwork Tracing & Maintenance Scripts:** Added deterministic tracing pipelines (`scripts/trace_skill_artwork.py`, `scripts/trace_support_artwork.py`) preserving authentic gym whiteboard marker contours in pure vector form.
+
+## Preceding milestone: Shared SVG symbol sprite, access icons & commitments review
 
 Implemented on 2026-10-10; see `docs/SVG-SPRITE.md` and `docs/VERIFICATION.md` for local and subpath checks performed.
 

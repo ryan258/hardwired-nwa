@@ -78,13 +78,16 @@ Navigation, page content, FAQ, and the donation explanation anchor remain usable
 - **Mural & Gym Sketch Direction**: Modeled after a handwritten gym whiteboard mural (`docs/references/mural-reference.png`), featuring Patrick Hand marker lettering, sketched borders, loose arrows, a hand-drawn barbell illustration, and an accessible 5-tier training pyramid (Nutrition, Conditioning, Gymnastics, Lifting, Sport). See `docs/MURAL-DIRECTION.md`.
 - **Physical Skill Motifs**: 10 vector SVG skill motifs (Cardio, Stamina, Strength, Flexibility, Power, Speed, Coordination, Agility, Balance, Accuracy) inspired by the mural, integrated into the training wall with downloadable symbols (`static/images/hardwired-icons.svg`) and interactive standalone preview at `/motifs-preview/`. See `docs/PHYSICAL-SKILL-MOTIFS.md`.
 - **Typography**: Barlow Condensed, DM Sans, and Patrick Hand loaded via Google Fonts with system fallbacks.
-- **Logo**: The latest supplied badge is retained unchanged in `assets/images/hardwired-nwa-badge-original.png`. The header, footer, and SVG favicon use `assets/images/hardwired-nwa-badge.svg`, a transparent vector trace with no embedded raster image. PNG icons are rendered from that SVG. The downloadable SVG is at `static/downloads/hardwired-nwa-logo.svg`. Earlier circular logo assets are retained. See `docs/LOGO-EDIT.md` for provenance.
+- **Logo**: The supplied badge is retained unchanged in `assets/images/hardwired-nwa-badge-original.png`. The header and footer use `assets/images/hardwired-nwa-badge.svg`, a transparent vector trace with no embedded raster image. The downloadable SVG is at `static/downloads/hardwired-nwa-logo.svg`. Earlier circular logo assets are retained. See `docs/LOGO-EDIT.md` for provenance.
+- **Favicon**: A compact blue hexagon with a white barbell follows the newer wordmark reference. SVG, 16/32px PNGs, a multi-size ICO, a 180px touch icon and a 512px site icon are included. Review and download at `/favicon-preview/`; regenerate with `python3 scripts/build_favicons.py` (ImageMagick required for export only). See `docs/FAVICON.md`.
 - **Concept Imagery**: An AI-generated editorial concept illustration (`static/images/adaptive-training-concept-blue-peach.png`; prompt in `docs/ART-PROMPT.md`). Fictional concept artwork, not documentary photographs.
 
 ## Project Documentation & Roadmap
 
 - **Handoff & Review Needs**: [`docs/HANDOFF.md`](docs/HANDOFF.md)
 - **Targeted Verification Record**: [`docs/VERIFICATION.md`](docs/VERIFICATION.md)
+- **Favicon Suite & Exports**: [`docs/FAVICON.md`](docs/FAVICON.md)
+- **Donation Card SVG Icons**: [`docs/DONATION-ICONS.md`](docs/DONATION-ICONS.md)
 - **Shared SVG Sprite Pipeline**: [`docs/SVG-SPRITE.md`](docs/SVG-SPRITE.md)
 - **Physical Skill Motifs & Vector Icons**: [`docs/PHYSICAL-SKILL-MOTIFS.md`](docs/PHYSICAL-SKILL-MOTIFS.md)
 - **Supporter Access Icons**: [`docs/ACCESS-ICONS.md`](docs/ACCESS-ICONS.md)
@@ -95,5 +98,5 @@ Navigation, page content, FAQ, and the donation explanation anchor remain usable
 - **Hero Illustration Generation Record**: [`docs/ART-PROMPT.md`](docs/ART-PROMPT.md)
 - **Project Roadmap & Milestones**: [`roadmap.md`](roadmap.md)
 
-The shared SVG icon sprite contains all 14 icon symbols (`static/images/hardwired-icons.svg`). Run `python3 scripts/build_svg_sprite.py` after changing the editable SVG sources. See `docs/SVG-SPRITE.md` for IDs and template usage.
+The shared SVG icon sprite contains all 24 icon symbols (`static/images/hardwired-icons.svg`). The latest additions are Donate Online and Donate by Check, with all 22 previous vectors preserved. `/icons-preview/` provides individual SVGs, visible donation, commitment, support and skills sheets, and the complete ZIP. Run `python3 scripts/build_svg_sprite.py` after changing the editable SVG sources. See `docs/SVG-SPRITE.md` for IDs and template usage.
 

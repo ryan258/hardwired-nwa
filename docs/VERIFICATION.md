@@ -74,3 +74,15 @@ The ten general physical skills pictured on the gym whiteboard mural (Cardio, St
 ## SVG consolidation and target correction — October 10, 2026
 
 The earlier inline sprite and separate static/download copies described above have been superseded by `static/images/hardwired-icons.svg`. The shared file contains all 14 icon symbols; the efficacy target now has concentric circular arcs with matching arrow gaps. The base-path build and eleven-page link check passed, all 30 external symbol references resolved, regeneration was deterministic, and Home/commitments previews rendered at desktop and 320px without horizontal overflow. See `docs/SVG-SPRITE.md` for the current pipeline and evidence.
+
+## Favicon suite & 24-symbol vector sprite expansion — October 11, 2026
+
+The hexagon barbell favicon suite, expanded 24-symbol SVG sprite, donation card motifs, and review galleries were verified:
+
+- **Favicon Kit:** Generated via `scripts/build_favicons.py` producing `static/favicon.svg`, `static/favicon.ico` (16, 32, 48px), 16/32px PNGs, 180px touch icon, and 512px site icon. Declared via `layouts/partials/favicon.html` and tested in standalone gallery at `/favicon-preview/`. See `docs/FAVICON.md`.
+- **24-Symbol Sprite:** Compiled deterministically via `scripts/build_svg_sprite.py` into `static/images/hardwired-icons.svg` (83,915 bytes) containing 24 symbols across physical skills, access cards, support pathways, commitments, and donation cards. Exported 24 standalone SVGs, 4 review sheets, and complete ZIP kit (`static/downloads/hardwired-nwa-icons.zip`). See `docs/SVG-SPRITE.md` and `docs/DONATION-ICONS.md`.
+- **Build & Link Gates:**
+  - `hugo --minify` built all 10 HTML pages with 49 static assets in ~26ms.
+  - `scripts/check_links.py ./public /` passed across all 13 HTML pages with 0 missing assets or broken anchors.
+  - Subpath build `hugo --baseURL "https://ryan258.github.io/hardwired-nwa/" --minify` and `scripts/check_links.py ./public /hardwired-nwa/` passed with 0 errors.
+
