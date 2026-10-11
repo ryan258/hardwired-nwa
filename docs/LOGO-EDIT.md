@@ -18,7 +18,7 @@ The user supplied a replacement badge and requested its use without white, follo
 
 The SVG is a 53-path trace of the original PNG, made with VTracer 0.6.15. It contains no embedded image, background rectangle, or white fills. All white areas are transparent, including letter counters and the badge interior. Artwork colors are the original dominant blue `#2D5473` and peach `#EEAD7E`; the site's CSS palette remains unchanged. The viewBox is cropped to the artwork plus a 5-unit margin (`49 99 501 537`). Raster antialiasing was classified against the two artwork colors using a 0.45 coverage threshold. Tracing used color/cutout/spline mode, speckle filter 1, color precision 8, layer difference 1, corner threshold 60, length threshold 1, max iterations 10, splice threshold 45, and path precision 3. This is a derived trace, not an original designer-authored vector master. The supplied “501c3” artwork is retained without independently verifying nonprofit status.
 
-The header/footer use the SVG with an accessible image name. The SVG favicon and transparent PNG icons use the same badge. PNG copies were rasterized from the SVG with ImageMagick.
+The header/footer use the SVG with an accessible image name. The earlier browser/touch icons used the same badge; the current favicon is a separate compact hexagon/barbell mark based on the newer wordmark reference (see `docs/FAVICON.md`). The badge SVG and PNG copies are retained unchanged. Badge PNG copies were rasterized from the SVG with ImageMagick.
 
 ### Final badge cutout prompt — built-in tool mode
 

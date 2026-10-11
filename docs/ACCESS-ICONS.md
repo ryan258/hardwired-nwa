@@ -1,5 +1,13 @@
 # Access-to-support icons
 
+## Additional SVG set — October 10, 2026
+
+The current collection contains 24 vectors. The Access to Support expansion added three illustrations while preserving the original 16; later additions supplied commitment and donation icons without changing this trio. Editable support sources are `assets/images/motifs/support-move-your-way.svg`, `support-scholarships-available.svg`, and `support-coach-who-cares.svg`. Each has a matching shared symbol and standalone file under `static/downloads/icons/`. The gallery at `/icons-preview/#support-heading` provides individual downloads, a complete ZIP, and a visible sheet at `/downloads/hardwired-nwa-support-sheet.svg`.
+
+The additions are native SVG contours traced from the three original generated PNGs listed below; no bitmap is embedded. `scripts/trace_support_artwork.py` records the authoring method and optional tracing dependencies. They preserve the original barbell/arrow, hand/access-card and coaching-partnership metaphors while cleaning edge noise and using the exact blue/peach palette. The PNG masters are unchanged. New `support-*` IDs keep the previous supporters and coach vectors intact. This asset expansion does not change homepage card selections, copy or destinations. All 16 prior definitions and standalone bytes passed a preservation comparison; the updated 19-entry ZIP, deterministic generation, base-path build and responsive gallery checks passed. See `docs/SVG-SPRITE.md` for details.
+
+## Original access artwork and previous revisions
+
 The user requested icons for the three cards in the supplied reference: Move Your Way, Scholarships Available, and A Coach Who Cares. Three new hand-drawn marker illustrations were generated in the site's blue-and-peach palette, with transparent backgrounds. They are used by the corresponding athlete, scholarship, and coach cards on Home. Each icon is decorative because its adjacent heading and text communicate the card's purpose.
 
 ## Assets
@@ -7,9 +15,16 @@ The user requested icons for the three cards in the supplied reference: Move You
 - `assets/images/motifs/access-move-your-way.png`: Move Your Way — dumbbell with an adaptable movement arrow. Copied unchanged from the built-in image tool's output.
 - `assets/images/motifs/access-scholarships.svg`: current 02 / For Supporters icon — an open hand supporting a peach heart, drawn directly as vector paths.
 - `assets/images/motifs/access-scholarships.png`: previous scholarship icon — an open hand supporting a gym access card. Retained unchanged from the built-in image tool's output.
-- `assets/images/motifs/access-coach-cares.png`: A Coach Who Cares — two equal-sized people connected by a heart. Copied unchanged from the built-in image tool's output.
+- `assets/images/motifs/access-coach-cares.svg`: current A Coach Who Cares icon — two equal-sized people joined by a gently curved line, with a peach heart above them. Native vector artwork on a transparent 128 × 128 canvas.
+- `assets/images/motifs/access-coach-cares.png`: previous coach icon, retained unchanged from the built-in image tool's output as a reference.
 
-The `layouts/partials/access-icon.html` partial renders the supporters symbol from `static/images/hardwired-icons.svg`; the athlete and coach illustrations remain 224px WebP exports from their PNG sources. CSS displays each icon at 112px. Each image has empty alt text and `aria-hidden="true"`; the adjacent heading and copy communicate its purpose. Full PNG sources are retained for reuse. The athlete and coach icons are generated raster illustrations; the supporters icon is now a native SVG.
+The `layouts/partials/access-icon.html` partial renders the supporters and coach symbols from `static/images/hardwired-icons.svg`; the athlete illustration remains a 224px WebP export from its PNG source. CSS displays each icon at 112px. Icons are decorative (`aria-hidden="true"`); raster images also have empty alt text. The adjacent heading and copy communicate each card's purpose. Full PNG sources are retained for reuse.
+
+## Coach SVG expansion — October 10, 2026
+
+The “A Coach Who Cares” reference requested a new icon for Elisabeth's coaching card. The new `access-coach-cares` symbol uses the set's blue `#2C5D75`, peach `#F9B689`, 4.6-unit rounded marker outlines, and 128 × 128 viewBox. Equal-sized head-and-shoulder figures and a connecting curve communicate partnership; the solid peach heart supplies the warm accent. The drawing does not portray Elisabeth or any specific athlete.
+
+The homepage coach card selects this vector automatically through the existing access-icon partial. Its current copy and `/our-coach/` destination remain as implemented; the screenshot's separate link annotation was not part of the icon request. The standard generator exports the standalone icon at `/downloads/icons/access-coach-cares.svg` and includes it in the gallery and complete 16-icon ZIP.
 
 ## Supporters SVG remake — October 10, 2026
 

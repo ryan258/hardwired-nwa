@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none" role="img" aria-labelledby="commitment-opportunity-title commitment-opportunity-description">
+  <title id="commitment-opportunity-title">Opportunity</title>
+  <desc id="commitment-opportunity-description">An open doorway with a clear peach path and light marks, representing welcoming access to new possibilities.</desc>
+  <g transform="translate(2.3178 5.5888) scale(0.934579)">
+    <g stroke="#2C5D75" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M36 27c20-.7 40-.4 60 0l.6 70" />
+      <path d="m36 27 25-13c.6 29 .4 59-.2 89L36 93c-.8-22-.5-44 0-66Z" />
+      <path d="M15 111c8-8 18-13 29-15m45 1c10 3 18 8 25 14" />
+    </g>
+    <path d="m52 57-.1 9" stroke="#F9B689" stroke-width="4.6" stroke-linecap="round" />
+    <path d="M59 116c2-14 8-28 22-44m-12 4 12-4-1 13" stroke="#F9B689" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round" />
+    <g stroke="#F9B689" stroke-width="5" stroke-linecap="round">
+      <path d="m78 16-2-7m24 7 4-6m5 25 8-1" />
+    </g>
+  </g>
+</svg>

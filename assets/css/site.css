@@ -54,9 +54,9 @@ body{background-image:radial-gradient(#19344208 .7px,transparent .7px);backgroun
 .skill-card:nth-child(3n){border-radius:4px 10px 6px 14px}
 .skill-card:nth-child(4n){border-radius:9px 5px 12px 4px}
 .skill-card:hover{transform:translateY(-2px);background:#f2f7f9;border-color:var(--blue);box-shadow:0 4px 12px rgba(44,93,117,.1)}
-.skill-icon-wrap{width:48px;height:48px;border-radius:50%;background:var(--tint);display:flex;align-items:center;justify-content:center;color:var(--blue);transition:background-color .15s ease,color .15s ease;flex-shrink:0}
-.skill-card:hover .skill-icon-wrap{background:var(--peach);color:var(--ink)}
-.skill-svg-icon{width:26px;height:26px;stroke:currentColor;stroke-width:2;fill:none;display:block}
+.skill-icon-wrap{width:64px;height:64px;border-radius:50%;background:transparent;display:flex;align-items:center;justify-content:center;color:var(--blue);transition:background-color .15s ease,color .15s ease;flex-shrink:0}
+.skill-card:hover .skill-icon-wrap{background:transparent;color:var(--blue)}
+.skill-svg-icon{width:64px;height:64px;fill:none;display:block}
 .skill-info{display:flex;flex-direction:column;align-items:center;width:100%}
 .skill-num{font-family:var(--hand);font-size:14px;color:var(--blue);display:block;line-height:1}
 .skill-name{font-family:var(--display);font-size:21px;font-weight:700;letter-spacing:.01em;text-transform:uppercase;color:var(--ink);line-height:1.1;margin:4px 0 2px}

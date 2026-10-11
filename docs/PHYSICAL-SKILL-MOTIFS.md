@@ -2,10 +2,18 @@
 
 The user requested a sprite sheet representing all ten skills in their mural photograph. The supplied spelling “strenght” is interpreted as “strength.” The artwork is a new illustration inspired by the reference, not a reproduction of the mural photograph.
 
+## Current vector direction
+
+The original illustrated PNG sheet is the visual standard. The ten current SVG skills are vector traces of those original illustrations, preserving their equipment detail, broad rounded contours, solid peach details, and sketch character. They are derived vectors, not newly hand-authored centerline drawings. The source PNG is unchanged. Each icon uses a 128 × 128 canvas with the artwork centered inside a 100-unit area; paths use exact blue `#2C5D75` and peach `#F9B689` fills, with transparent interiors and background.
+
+The thin geometric redraws and their recolored predecessors have been superseded. View the current set at `/icons-preview/`; a visible standalone SVG sheet is at `/downloads/hardwired-nwa-skills-sheet.svg`. The existing PNG sheet and its CSS remain available as the original reference.
+
+`scripts/trace_skill_artwork.py` records the optional authoring process and requires Pillow 12.3 plus VTracer 0.6.15. Normal exports still use the standard-library-only `scripts/build_svg_sprite.py`.
+
 ## Files and use
 
-- `assets/images/physical-skills-icons.svg`: SVG symbol sprite containing all ten vector skill motifs (`#skill-cardio` through `#skill-accuracy`), styled with `stroke="currentColor"`.
-- `static/images/hardwired-icons.svg`: optimized shared web sprite, including these ten skills, the supporters icon, and the three commitments icons.
+- `assets/images/physical-skills-icons.svg`: SVG symbol sprite containing all ten vector skill motifs (`#skill-cardio` through `#skill-accuracy`), containing two-color vector traces of the original illustrated sheet.
+- `static/images/hardwired-icons.svg`: optimized shared web sprite, including these ten skills, the supporters and coach icons, the three commitments icons, and adaptive equipment.
 - `scripts/build_svg_sprite.py`: regenerates the shared sprite from editable sources; the duplicate static skills files and inline definitions have been removed.
 - `layouts/partials/training-wall.html`: site component integrating all ten physical skills cards into the mural training wall on Home and Adaptive CrossFit pages.
 - `static/images/motifs/physical-skills-sprite.png`: transparent PNG, 1983 × 793 pixels, raster sprite sheet.

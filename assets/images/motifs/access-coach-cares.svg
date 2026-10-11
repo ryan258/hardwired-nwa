@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none" role="img" aria-labelledby="coach-title coach-description">
+  <title id="coach-title">A Coach Who Cares</title>
+  <desc id="coach-description">Two equal-sized people connected by a gently curved blue line and a peach heart, representing listening, encouragement, and support.</desc>
+  <g stroke="#2C5D75" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M50 58c0 8-6 15-14 15S22 66 22 58s6-14 14-14 14 6 14 14Z"/>
+    <path d="M106 57c0 8-6 15-14 15s-14-6-14-14 6-14 14-14 14 6 14 13Z"/>
+    <path d="M12 105c3-19 11-28 24-28s21 10 25 28"/>
+    <path d="M68 105c3-19 11-28 24-28s21 10 25 28"/>
+    <path d="M53 85c7 5 15 5 22 0"/>
+  </g>
+  <path d="M64 46c-6-5-13-10-13-16 0-7 9-10 13-3 4-7 13-4 13 3 0 6-7 11-13 16Z" fill="#F9B689"/>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none" role="img" aria-labelledby="commitment-strength-title commitment-strength-description">
+  <title id="commitment-strength-title">Strength</title>
+  <desc id="commitment-strength-description">A sketched loaded barbell beneath a peach star, representing effort toward personal goals.</desc>
+  <g transform="translate(8.4952 12.9059) scale(0.860697)">
+    <g transform="rotate(-12 64 80)" stroke="#2C5D75" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M43 74c13-.6 27-.3 41 0m-41 12c14 .4 28 .5 41-.1" />
+      <path d="M35 57c-7-.4-12 10-12 23s5 23 12 23c7 .2 11-11 11-23s-4-23-11-23Z" />
+      <path d="M29 61c-7-1-12 8-12 19 0 12 5 19 12 19M18 69c-5-1-8 4-8 11s3 12 8 11" />
+      <path d="M35 65c-3 1-5 7-5 15s2 15 5 16" stroke-width="3.6" />
+      <path d="M94 57c7-.4 12 10 12 23s-5 23-12 23c-7 .2-11-11-11-23s4-23 11-23Z" />
+      <path d="M100 61c7-1 12 8 12 19 0 12-5 19-12 19m11-30c5-1 8 4 8 11s-3 12-8 11" />
+      <path d="M94 65c3 1 5 7 5 15s-2 15-5 16" stroke-width="3.6" />
+      <path d="m53 85 5-10m6 10 5-10m6 10 5-10" stroke="#F9B689" stroke-width="4.6" />
+    </g>
+    <path d="m65 15 5 10 11 2-8 8 2 11-10-5-10 5 2-11-8-8 11-2Z" fill="#F9B689" stroke="#F9B689" stroke-width="2.4" stroke-linejoin="round" />
+    <g stroke="#2C5D75" stroke-width="4" stroke-linecap="round">
+      <path d="m39 24-6-3m59 6 6-3M64 7v-2" />
+    </g>
+  </g>
+</svg>

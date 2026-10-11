@@ -1,5 +1,15 @@
 # Our Commitments SVG icons
 
+## Strength, Community and Opportunity — October 10, 2026
+
+The latest reference adds three commitment icons to the collection, preserving all 19 earlier vectors. Editable sources are `assets/images/motifs/commitment-strength.svg`, `commitment-community.svg` and `commitment-opportunity.svg`; matching IDs appear in the shared sprite and matching standalone files appear under `static/downloads/icons/`.
+
+Strength uses a tilted barbell with peach grip marks and a goal star. Community uses three connected people with a peach heart and warm light marks. Opportunity uses an open door with a clear peach path. All three are drawn directly as native SVG paths with rounded marker strokes, transparent backgrounds and the exact blue/peach palette. Their geometry is centered and normalized to 100 units on the set's 128-unit canvas. Existing Safety, Efficacy and Efficiency artwork is retained.
+
+Review at `/icons-preview/#values-heading`, or open the visible three-icon sheet at `/downloads/hardwired-nwa-commitments-sheet.svg`. The complete ZIP now contains 22 standalone icons. Preservation comparisons, ZIP integrity, deterministic export, the base-path Hugo build, twelve-page link checks and responsive gallery checks passed. The reference's prose is context for the artwork; the main site's copy and card selections are unchanged.
+
+## Safety, Efficacy and Efficiency
+
 The user clarified the SVG expansion with an “Our Commitments” reference containing Safety, Efficacy, and Efficiency. This set supplies those three icons. The reference's “need new copy” annotations are not treated as approved organization statements; the artwork preview uses only the supplied labels and descriptions of the symbols.
 
 ## Canonical assets
@@ -14,7 +24,7 @@ All three are authored directly as SVG vector geometry, with no raster image or 
 
 ## Shared sprite and preview
 
-- `static/images/hardwired-icons.svg`: the single optimized web sprite for all 14 icon symbols. Commitment IDs are `commitment-safety`, `commitment-efficacy`, and `commitment-efficiency`.
+- `static/images/hardwired-icons.svg`: the single optimized web sprite for all 24 icon symbols. The original commitment IDs are `commitment-safety`, `commitment-efficacy`, and `commitment-efficiency`; the additional IDs are `commitment-strength`, `commitment-community`, and `commitment-opportunity`.
 - `/commitments-preview/`: responsive artwork review page displaying the three commitments from that shared file, plus examples at 32, 64, and 112px. Its download link supplies the complete sprite.
 
 The previous standalone web downloads and separate commitment sprite have been removed. Editable SVG sources remain in `assets/images/motifs/`.

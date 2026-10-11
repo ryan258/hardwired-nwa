@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none" role="img" aria-labelledby="donation-check-title donation-check-description">
+  <title id="donation-check-title">Donate by Check</title>
+  <desc id="donation-check-description">A paper check with a peach signature, a pen and a small heart, representing donations by check.</desc>
+  <g transform="translate(1.3142 12.7595) scale(0.919257)">
+    <g stroke="#2C5D75" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 36c21-.6 43-.4 64 0 5 0 8 3 8 8l-.2 47c0 6-3 9-8 9-21 .6-43 .4-64 0-5 0-8-3-8-9l.2-47c0-5 3-8 8-8Z" />
+      <path d="M25 49h24m-24 15c10 .3 20 .2 30 0" stroke-width="3.8" />
+      <path d="M68 48c6-.3 12-.2 18 0l-.1 13c-6 .3-12 .2-18 0Z" stroke-width="3.4" />
+      <path d="M25 87h6m5 0h3m5 0h6" stroke-width="3.8" />
+    </g>
+    <path d="M52 82c7-10 13-12 11-4-3 11-1 13 4 5 3-6 2 8 6 2 3-4 6-4 9-1" stroke="#F9B689" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M47 28c-5-3-10-8-10-12 0-5 6-7 10-2 4-5 10-3 10 2 0 4-6 9-10 12Z" fill="#F9B689" />
+    <g transform="rotate(12 110 53)" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M105 75V22c0-4 2-6 5-6s5 2 5 6v53" stroke="#2C5D75" stroke-width="4.6" />
+      <path d="M105 29h10" stroke="#2C5D75" stroke-width="3.8" />
+      <path d="m105 75 5 19 5-19Z" fill="#F9B689" stroke="#F9B689" stroke-width="2.4" />
+    </g>
+  </g>
+</svg>
