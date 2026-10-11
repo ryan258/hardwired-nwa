@@ -7,13 +7,7 @@
   <meta name="description" content="{{ .Description | default .Site.Params.description }}">
   <meta name="theme-color" content="#2c5d75">
   <title>{{ if not .IsHome }}{{ .Title }} · {{ end }}{{ .Site.Title }} — Adaptive fitness</title>
-  {{ $logo := resources.Get "images/hardwired-nwa-badge.svg" }}
-  <link rel="icon" href="{{ $logo.RelPermalink }}" type="image/svg+xml">
-  {{ $iconSource := resources.Get "images/hardwired-nwa-badge-icon.png" }}
-  {{ $icon := $iconSource.Resize "64x png" }}
-  <link rel="icon" href="{{ $icon.RelPermalink }}" type="image/png" sizes="64x64">
-  {{ $touchIcon := $iconSource.Resize "180x png" }}
-  <link rel="apple-touch-icon" href="{{ $touchIcon.RelPermalink }}" sizes="180x180">
+  {{ partial "favicon.html" . }}
   {{ $style := resources.Get "css/site.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
   {{ $script := resources.Get "js/site.js" | minify | fingerprint }}

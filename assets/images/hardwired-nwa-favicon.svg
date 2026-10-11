@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="favicon-title">
+  <title id="favicon-title">Hardwired NWA barbell mark</title>
+  <path fill="#2C5D75" d="M28 3.5q4-2.3 8 0l19 11q3.5 2.1 3.5 6.1v22.8q0 4-3.5 6.1l-19 11q-4 2.3-8 0l-19-11q-3.5-2.1-3.5-6.1V20.6q0-4 3.5-6.1Z"/>
+  <g fill="#FFFFFF">
+    <rect x="12" y="20" width="5" height="24" rx="1.5"/>
+    <rect x="20" y="15" width="5" height="34" rx="1.5"/>
+    <rect x="27" y="29" width="10" height="6" rx="1"/>
+    <rect x="39" y="15" width="5" height="34" rx="1.5"/>
+    <rect x="47" y="20" width="5" height="24" rx="1.5"/>
+  </g>
+</svg>
